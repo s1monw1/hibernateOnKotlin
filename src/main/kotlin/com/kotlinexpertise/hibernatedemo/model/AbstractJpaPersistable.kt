@@ -42,17 +42,13 @@ abstract class AbstractJpaPersistable<T : Serializable> : Persistable<T> {
     override fun equals(other: Any?): Boolean {
         other ?: return false
 
-        if (this === other) {
-            return true
-        }
+        if (this === other) return true
 
-        if (javaClass != ProxyUtils.getUserClass(other)) {
-            return false
-        }
+        if (javaClass != ProxyUtils.getUserClass(other)) return false
 
-        val that = other as AbstractJpaPersistable<*>?
+        other as AbstractJpaPersistable<*>
 
-        return if (null == this.getId()) false else this.getId() == that!!.getId()
+        return if (null == this.getId()) false else this.getId() == other.getId()
     }
 
     override fun hashCode(): Int {
