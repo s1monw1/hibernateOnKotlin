@@ -2,4 +2,4 @@
 
 This application shows how you can set up a simple Spring Boot application written in Kotlin with Hibernate/JPA enabled. It focusing on defining Hibernate entities properly.
 
-Read the corresponding blog post [here](TODO).
+Read the corresponding blog post [here](https://kotlinexpertise.com/hibernate-with-kotlin-spring-boot/).
